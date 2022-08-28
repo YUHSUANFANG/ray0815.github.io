@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src = "/dist/web3.min.js"></script>
+  <script src = "/dist/pixi.min.js"></script>
+  <!-- <script src="/dist/iphone-inline-video.min.js"></script> -->
+  <title>Ray's Space</title>
+</head>
+
+<body>
+  <script src = "/main.js"></script>
+  <script src = "/contract.js"></script>
+  <script src = "/raygame.js"></script>
+  <header class="header" id="top">
+    <div class="w3-top">
+      <div class="w3-bar w3-black w3-card header">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+          href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="https://rayfang.azurewebsites.net/index.html" class="w3-bar-item w3-button w3-padding-large ">Ray Fang</a>
+        <span class="w3-right">
+
+
+          <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home</a>
+          <a href="#music" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RayBeat</a>
+          <a href="#gallery" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RayArt</a>
+          <a href="#awards" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RayAward</a>
+          <a href="#minigame" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RayGame</a>
+          <a href="#feedback" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Feedback</a>
+        </span>
+      </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+      <a href="#home" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Home</a>
+      <a href="#music" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RayBeat</a>
+      <a href="#gallery" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RayArt</a>
+      <a href="#awards" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RayAward</a>
+      <a href="#minigame" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RayGame</a>
+      <a href="#feedback" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Feedback</a>
+    </div>
+  </header>
+  <main>
+    <div class="hero-section w3-animate-left " id="home">
+      <div class="hero-section-main">
+        <div class="hero-section-into-text w3-margin-top">
+          <h1 class="w3-text-white">Ray Fang</h1>
+          <p class="w3-right w3-text-white w3-small w3-hide-small hero-qoute ">
+            "Learn from yesterday, live for today, hope for tomorrow.
+            The important thing is not to stop questioning." —Albert Einstein
+
+          </p>
+          <div class="w3-text-white l " style="margin-top:60px">
+            <p>Follow us on Social media</p>
+            <div class="w3-margin-top">
+              <a href="#"><i class="fa fa-facebook-official w3-hover-opacity icons"></i></a>
+              <a href="#"><i class="fa fa-instagram w3-hover-opacity icons"></i></a>
+              <a href="#"><i class="fa fa-snapchat w3-hover-opacity icons"></i></a>
+              <a href="#"><i class="fa fa-pinterest-p w3-hover-opacity icons"></i></a>
+              <a href="#"><i class="fa fa-twitter w3-hover-opacity icons"></i></a>
+              <a href="https://www.linkedin.com/in/samfang200037655/"><i
+                  class="fa fa-linkedin w3-hover-opacity icons"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </main>
+
+  <section>
+    <div class="category" id="music">
+      <div class="w3-container ">
+        <h2 class="section-text-header">My Beats</h2>
+      </div>
+      <div class="new-contents">
+        <div class="ray-content">
+          <div class="ray-image">
+            <video preload controls loop width="300" height="300" playsinline>
+              <source src="https://storage.googleapis.com/tibameai20210519/IMG_6037.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="w3-margin-top" style="overflow: hidden; padding:0px 20px;">
+            <h4>RayFang</h4>
+          </div>
+        </div>
+        <div class="ray-content">
+          <div class="ray-image">
+            <video preload controls loop width="300" height="300" playsinline>
+              <source src="https://storage.googleapis.com/tibameai20210519/IMG_3863.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="w3-margin-top" style="overflow: hidden; padding:0px 20px;">
+            <h4>RayFang</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="category" id="gallery">
+      <div class="w3-container ">
+        <h2 class="section-text-header">My Arts</h2>
+      </div>
+      <div class="new-contents">
+        <div class="ray-content">
+          <div class="ray-image">
+            <img src="img/20220531230048.jpg" alt="" />
+          </div>
+          <div class="w3-margin-top" style="overflow: hidden; padding:0px 20px;">
+            <a href="https://t.co/mT6DdjVKuj">RayFang</a>
+          </div>
+        </div>
+        <div class="ray-content">
+          <div class="ray-image">
+            <img src="img/20220531230032.jpg" alt="" />
+          </div>
+          <div class="w3-margin-top" style="overflow: hidden;  padding:0px 20px;">
+            <a href="https://t.co/sN9xfBVZg1">RayFang</a>
+          </div>
+        </div>
+        <div class="ray-content">
+          <div class="ray-image">
+            <img src="img/20220531230024-copy.jpg" alt="" />
+          </div>
+          <div class="w3-margin-top" style="overflow: hidden;  padding:0px 20px;">
+            <a href="https://t.co/GNrtENeApq">RayFang</a>
+          </div>
+        </div>
+        <div class="ray-content">
+          <div class="ray-image">
+            <img src="img/20220531230012-copy.jpg" alt="" />
+          </div>
+          <div class="w3-margin-top" style="overflow: hidden;  padding:0px 20px;">
+            <a href="https://t.co/QDLKepyZRE">RayFang</a>
+          </div>
+        </div>
+        <div class="ray-content">
+          <div class="ray-image">
+            <img src="img/20220531230039.jpg" alt="" />
+          </div>
+          <div class="w3-margin-top" style="overflow: hidden;  padding:0px 20px;">
+            <a href="https://opensea.io/0xDcd7d9D005682bFB39F3d1506e4e0Bb154538d2b">RayFang</a>
+          </div>
+        </div>
+        <div class="ray-content">
+          <div class="ray-image">
+            <img src="img/20220531230017-copy.jpg" alt="" />
+          </div>
+          <div class="w3-margin-top" style="overflow: hidden;  padding:0px 20px;">
+            <a href="https://opensea.io/0xDcd7d9D005682bFB39F3d1506e4e0Bb154538d2b">RayFang</a>
+          </div>
+        </div>
+        <div class="ray-content">
+          <div class="ray-image">
+            <img src="img/20220531230006-copy.jpg" alt="" />
+          </div>
+          <div class="w3-margin-top" style="overflow: hidden;  padding:0px 20px;">
+            <a href="https://t.co/glJla26mSc">RayFang</a>
+          </div>
+        </div>
+        <div class="ray-content">
+          <div class="ray-image">
+            <img src="img/20220531225955-copy.jpg" alt="" />
+          </div>
+          <div class="w3-margin-top" style="overflow: hidden;  padding:0px 20px;">
+            <a href="https://t.co/vg93NpiZk3">RayFang</a>
+          </div>
+        </div>
+        <div class="ray-content">
+          <div class="ray-image">
+            <img src="img/20220531225939-copy.jpg" alt="" />
+          </div>
+          <div class="w3-margin-top" style="overflow: hidden;  padding:0px 20px;">
+            <a href="https://opensea.io/0xDcd7d9D005682bFB39F3d1506e4e0Bb154538d2b">RayFang</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="category" id="awards">
+      <div class="w3-container ">
+        <h2 class="section-text-header">My Awards</h2>
+      </div>
+      <div class="new-contents">
+        <div class="ray-content">
+          <div class="ray-image">
+            <img src="img/a20220601131427.jpg" alt="" />
+          </div>
+          <div class="w3-margin-top" style="overflow: hidden; padding:0px 20px;">
+            <h4 style="text-overflow:ellipsis ;overflow: hidden;">RayFang</h4>
+          </div>
+        </div>
+        <div class="ray-content">
+          <div class="ray-image">
+            <img src="img/a20220601131437.jpg" alt="" />
+          </div>
+          <div class="w3-margin-top" style="overflow: hidden;  padding:0px 20px;">
+            <h4>RayFang</h4>
+          </div>
+        </div>
+        <div class="ray-content">
+          <div class="ray-image">
+            <img src="img/a20220601131415.jpg" alt="" />
+          </div>
+          <div class="w3-margin-top" style="overflow: hidden;  padding:0px 20px;">
+            <h4>RayFang</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comment Feedback-->
+  <div class="w3-light-gray" style="margin-top: 40px; padding: 50px 0px;" id="feedback">
+    <div class="w3-container ">
+      <h2 class="section-text-header">My Likes</h2>
+    </div>
+    <div class="Comment-feedback" style="display: flex;justify-content: space-evenly;flex-wrap: wrap;">
+      <div class="card">
+        <div class="Comment-feedback-header">
+          <div class="Comment-profile">
+            <img src="img/a20220601131427.jpg" />
+          </div>
+          <div>
+            <p class="name">Sam Fang</p>
+
+          </div>
+        </div>
+        <div>
+          <p class="w3-small">"Little da Vinci !"</p>
+          <!-- I love you 3000 -->
+        </div>
+      </div>
+      <div class="card">
+        <div class="Comment-feedback-header">
+          <div class="Comment-profile">
+            <img src="img/a20220601131437.jpg" />
+          </div>
+          <div>
+            <p class="name">Sam Fang</p>
+
+          </div>
+        </div>
+        <div>
+          <p class="w3-small">"great athlete"</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="Comment-feedback-header">
+          <div class="Comment-profile">
+            <img src="img/a20220601131415.jpg" />
+          </div>
+          <div>
+            <p class="name">Sam Fang</p>
+
+          </div>
+        </div>
+        <div>
+          <p class="w3-small">"beat it!"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="w3-center contact" id="feedback">
+    <div class=" w3-left-align w3-margin-top contact-info ">
+      <h4 style="font-weight: 600;">Follow Us </h4>
+
+      <i class="fa fa-facebook-official w3-hover-opacity icons"></i>
+      <i class="fa fa-instagram w3-hover-opacity icons"></i>
+      <i class="fa fa-snapchat w3-hover-opacity icons"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity icons"></i>
+      <i class="fa fa-twitter w3-hover-opacity icons"></i>
+      <i class="fa fa-linkedin w3-hover-opacity icons"></i>
+    </div>
+  </div>
+
+  <section>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+
+    <div class="category" id="minigame">
+      <div class="w3-container ">
+        <h2 class="section-text-header">My MiniGame</h2>
+      </div>
+      <!-- <script src = "/raygame.js"></script> -->
+  </section>
+
+</body>
+</html>
