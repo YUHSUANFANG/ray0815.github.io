@@ -80,33 +80,31 @@ scene_Register.addChild(ui_label_RegisterInfo2);
 
 
 var sprite_frog = new PIXI.Sprite.from("assets/frog.jpg");
-var sprite_wolf = new PIXI.Sprite.from("assets/wolf.jpg");
 sprite_frog.anchor.set(0.5);
-sprite_frog.x = app.screen.width/3;
+sprite_frog.x = app.screen.width*2/3;
 sprite_frog.y = app.screen.height*2/3;
 sprite_frog.scale.set(0.5);
 sprite_frog.interactive = true;
 sprite_frog.buttonMode = true;
+scene_Register.addChild(sprite_frog);
+
+var sprite_wolf = new PIXI.Sprite.from("assets/wolf.jpg");
 sprite_wolf.anchor.set(0.5);
-sprite_wolf.x = app.screen.width*2/3;
+sprite_wolf.x = app.screen.width/3;
 sprite_wolf.y = app.screen.height*2/3;
 sprite_wolf.scale.set(0.5);
 sprite_wolf.interactive = true;
 sprite_wolf.buttonMode = true;
-scene_Register.addChild(sprite_frog);
 scene_Register.addChild(sprite_wolf);
 
+// var sprite_wolfn = new PIXI.Sprite.from("assets/wolfnight.jpg");
+// var sprite_wolfd = new PIXI.Sprite.from("assets/wolfday.jpg");
+var sprite_fight = new PIXI.Sprite.from("assets/fight.jpg");
+var sprite_water = new PIXI.Sprite.from("assets/water.jpg");
 var sprite_gala = new PIXI.Sprite.from("assets/glgl.jpg");
 var sprite_tree = new PIXI.Sprite.from("assets/tree.jpg");
 var sprite_rock = new PIXI.Sprite.from("assets/rock.jpg");
-var sprite_fox = new PIXI.Sprite.from("assets/fox.jpg");
-var sprite_owl = new PIXI.Sprite.from("assets/owl.jpg");
-var sprite_mxd = new PIXI.Sprite.from("assets/mxd.jpg");
 var sprite_lpls = new PIXI.Sprite.from("assets/lpls.jpg");
-var sprite_wolfn = new PIXI.Sprite.from("assets/wolfnight.jpg");
-var sprite_wolfd = new PIXI.Sprite.from("assets/wolfday.jpg");
-var sprite_fight = new PIXI.Sprite.from("assets/fight.jpg");
-var sprite_water = new PIXI.Sprite.from("assets/water.jpg");
 var sprite_fire = new PIXI.Sprite.from("assets/fire.jpg");
 var sprite_pika = new PIXI.Sprite.from("assets/pika.jpg");
 var sprite_yibu = new PIXI.Sprite.from("assets/yibu.jpg");
@@ -115,7 +113,9 @@ var sprite_mud = new PIXI.Sprite.from("assets/mud.jpg");
 var sprite_pkc = new PIXI.Sprite.from("assets/pkc.jpg");
 var sprite_cat = new PIXI.Sprite.from("assets/cat.jpg");
 var sprite_big = new PIXI.Sprite.from("assets/big.jpg");
-
+var sprite_fox = new PIXI.Sprite.from("assets/fox.jpg");
+var sprite_owl = new PIXI.Sprite.from("assets/owl.jpg");
+var sprite_mxd = new PIXI.Sprite.from("assets/mxd.jpg");
 
 
 
@@ -172,47 +172,49 @@ ui_bt_Vote.anchor.set(0.5);
 ui_bt_Vote.x = app.view.width/2;
 ui_bt_Vote.y = app.view.height/2+50;
 ui_bt_Vote.scale.set(1.5);
+
 ui_bt_vote_frog.anchor.set(0.5);
 ui_bt_vote_frog.x = app.screen.width/2;
 ui_bt_vote_frog.y = app.screen.height*2/3;
 ui_bt_vote_frog.scale.set(0.5);
+
 ui_bt_vote_wolf.anchor.set(0.5);
 ui_bt_vote_wolf.x = app.screen.width/2;
 ui_bt_vote_wolf.y = app.screen.height*2/3;
 ui_bt_vote_wolf.scale.set(0.5);
 
-var ui_bt_vote_gala = new PIXI.Sprite.from("assets/glgl.jpg");
-var ui_bt_vote_tree = new PIXI.Sprite.from("assets/tree.jpg");
-var ui_bt_vote_rock = new PIXI.Sprite.from("assets/rock.jpg");
 var ui_bt_vote_fox = new PIXI.Sprite.from("assets/fox.jpg");
 var ui_bt_vote_owl = new PIXI.Sprite.from("assets/owl.jpg");
 var ui_bt_vote_mxd = new PIXI.Sprite.from("assets/mxd.jpg");
+var ui_bt_vote_gala = new PIXI.Sprite.from("assets/glgl.jpg");
+var ui_bt_vote_tree = new PIXI.Sprite.from("assets/tree.jpg");
+var ui_bt_vote_rock = new PIXI.Sprite.from("assets/rock.jpg");
 var ui_bt_vote_lpls = new PIXI.Sprite.from("assets/lpls.jpg");
 
 scene_Vote.addChild(ui_bt_Vote);
+scene_Vote.addChild(sprite_fox);
 scene_Vote.addChild(sprite_gala);
 scene_Vote.addChild(sprite_tree);
 scene_Vote.addChild(sprite_rock);
-scene_Vote.addChild(sprite_fox);
-
 
 function InitGame(){
     // console.log(myweb3.eth.accounts.length); //!!!!!!!!ERROR here when metamask account is not login : Uncaught TypeError: Insufficient number of arguments.!!!!!!!!
-    var checkAccountInterval = setInterval(async function(){    //sam008 async+await example
-        if (myweb3.eth.accounts.length !== 0){
-            const accounts = await myweb3.eth.getAccounts();    //sam008 await+await example   
-            if (curAccount !== accounts[0]){
-                curAccount = accounts[0];
-                updateUI();
-            }else{
-                // console.log("preAcount == accounts[0]");
-            }
-        }else{
-            console.log("no web3 account");
-        }
-        // console.log("clear interval");
-        // clearInterval(checkAccountInterval);
-    }, 100);  //1000ms = 1s
+    // var checkAccountInterval = setInterval(async function(){    //sam008 async+await example
+    //     if (myweb3.eth.accounts.length !== 0){
+    //         const accounts = await myweb3.eth.getAccounts();    //sam008 await+await example   
+    //         if (curAccount !== accounts[0]){
+    //             curAccount = accounts[0];
+    //             updateUI();
+    //         }else{
+    //             // console.log("preAcount == accounts[0]");
+    //         }
+    //     }else{
+    //         console.log("no web3 account");
+    //     }
+    //     // console.log("clear interval");
+    //     // clearInterval(checkAccountInterval);
+    // }, 100);  //1000ms = 1s
+    updateUI();
     InitButtonEvent();
 }
 
@@ -336,7 +338,7 @@ function updateUI3(){
 
     }
     if(lplsget){
-        var rnd = Math.floor(Math.random()*20);
+        var rnd = Math.floor(Math.random()*18);
         console.log(rnd);
         switch (rnd) {
             case 0:
@@ -358,7 +360,7 @@ function updateUI3(){
                 var sprite_rnd = new PIXI.Sprite.from("assets/pika.jpg");
                 break;
             case 6:
-                var sprite_rnd = new PIXI.Sprite.from("assets/yibu.jpg");
+                var sprite_rnd = new PIXI.Sprite.from("assets/metwo.jpg");
                 break;
             case 7:
                 var sprite_rnd = new PIXI.Sprite.from("assets/mud.jpg");
@@ -427,123 +429,82 @@ function updateUI(){
     app.stage.addChild(scene_Register);
     // app.stage.addChild(scene_Vote);
 
-    msgContract.methods.GetIsFrog().call({from:curAccount},function(err,res){
-        //sam008 call example
-        //web3js : methods.myMethod.call
-        // console.log("test");
-        if(!err){
-            console.log(res.toString());
-            //clear screen
+    // msgContract.methods.GetIsFrog().call({from:curAccount},function(err,res){
+    //     //sam008 call example
+    //     //web3js : methods.myMethod.call
+    //     // console.log("test");
+    //     if(!err){
+    //         console.log(res.toString());
+    //         //clear screen
 
-            if(res){
-                frogstate = 1;
-                app.stage.removeChild(scene_Register);
-                app.stage.removeChild(scene_Vote);
+    if(frogstate){
+        frogstate = 1;
+        app.stage.removeChild(scene_Register);
+        app.stage.removeChild(scene_Vote);
 
-                //new screen
-                // app.stage.addChild(scene_Register);
-                scene_Vote.addChild(ui_bt_vote_frog);
-                app.stage.addChild(scene_Vote);
-    
-            }else{
-                msgContract.methods.GetIsWolf().call({from:curAccount},function(err,res){
-                    //sam008 call example
-                    //web3js : methods.myMethod.call
-                    // console.log("test");
-                    if(!err){
-                        console.log(res.toString());
-                        //clear screen
+        //new screen
+        // app.stage.addChild(scene_Register);
+        scene_Vote.addChild(ui_bt_vote_frog);
+        app.stage.addChild(scene_Vote);
+    }  
+    if(wolfstate){
+        wolfstate = 1;
+        app.stage.removeChild(scene_Register);
+        app.stage.removeChild(scene_Vote);
             
-                        if(res){
-                            wolfstate = 1;
-                            app.stage.removeChild(scene_Register);
-                            app.stage.removeChild(scene_Vote);
+        //new screen
+        // app.stage.addChild(scene_Register);
+        scene_Vote.addChild(ui_bt_vote_wolf);
+        app.stage.addChild(scene_Vote);         
+    }
+    if(0){
+        app.stage.removeChild(scene_Register);
+        app.stage.removeChild(scene_Vote);
             
-                            //new screen
-                            // app.stage.addChild(scene_Register);
-                            scene_Vote.addChild(ui_bt_vote_wolf);
-                            app.stage.addChild(scene_Vote);
-                
-                        }else{
-                            app.stage.removeChild(scene_Register);
-                            app.stage.removeChild(scene_Vote);
-            
-                            //new screen
-                            app.stage.addChild(scene_Register);
-                            // app.stage.addChild(scene_Vote);
-                        }
-                    }else{
-                        console.log(err.toString());
-                    }
-                });
-            }
-        }else{
-            console.log(err.toString());
-        }
-    });
+        //new screen
+        app.stage.addChild(scene_Register);
+        // app.stage.addChild(scene_Vote);
+    } 
 }
 
 function InitButtonEvent(){
     ui_bt_Register.on("click",function(){
         console.log("0000000");
-        msgContract.methods.Register().send({from:curAccount},function(err){
-            //sam008 send example without parameter
-            //web3js : methods.myMethod.send
-            if(!err){
-                console.log("1111111");
-                var interval_checkRegister = setInterval(function(){
-                    msgContract.methods.GetIsRegistered().call(function(err,res){
-                        if(res == true){
-                            updateUI();
-                            clearInterval(interval_checkRegister);
-                        }
-                    })
-                },100);                
-            }else{
-                console.log("register error");
-            }
-        });
+        updateUI();
+        // clearInterval(interval_checkRegister);
+        // msgContract.methods.Register().send({from:curAccount},function(err){
+        //     //sam008 send example without parameter
+        //     //web3js : methods.myMethod.send
+        //     if(!err){
+        //         console.log("1111111");
+        //         var interval_checkRegister = setInterval(function(){
+        //             msgContract.methods.GetIsRegistered().call(function(err,res){
+        //                 if(res == true){
+        //                     updateUI();
+        //                     clearInterval(interval_checkRegister);
+        //                 }
+        //             })
+        //         },100);                
+        //     }else{
+        //         console.log("register error");
+        //     }
+        // });
     });
 
     sprite_frog.on("click",function(){
         console.log("choose frog");
         frogstate = 1;
         wolfstate = 0;
-        msgContract.methods.CFrog().send({from:curAccount},function(err){
-            if(!err){
-                console.log("1111111");
-                var interval_checkRegister = setInterval(function(){
-                    msgContract.methods.GetIsFrog().call(function(err,res){
-                        if(res == true){
-                            updateUI();
-                            clearInterval(interval_checkRegister);
-                        }
-                    })
-                },100);                
-            }else{
-                console.log("click error");
-            }
-        });
+        updateUI();
+        // clearInterval(interval_checkRegister);
     });
+
     sprite_wolf.on("click",function(){
         console.log("choose wolf");
         frogstate = 0;
         wolfstate = 1;
-        msgContract.methods.CWolf().send({from:curAccount},function(err){
-            if(!err){
-                console.log("1111111");
-                var interval_checkRegister = setInterval(function(){
-                    msgContract.methods.GetIsWolf().call(function(err,res){
-                        if(res == true){
-                            updateUI();
-                            clearInterval(interval_checkRegister);
-                        }
-                    })
-                },100);                
-            }else{
-                console.log("click error");
-            }
-        });
+        updateUI();
+        // clearInterval(interval_checkRegister);
     });
 
     sprite_gala.on("click",function(){
@@ -589,7 +550,8 @@ function InitButtonEvent(){
     sprite_fox.on("click",function(){
         console.log("choose fox");
         alert("九尾由於生活在被冰雪封閉，有著神明居住的山上，在過去被人們敬仰為神的化身。");
-        if(wolfstate || galaget || rockget){
+        // if(wolfstate || galaget || rockget){
+        if(galaget || rockget){
             alert("屬性:冰,妖精, 弱點:火,毒,岩石,鋼");
             pkmcount = pkmcount + 1;
             foxget = 1;
@@ -614,7 +576,7 @@ function InitButtonEvent(){
 
     sprite_mxd.on("click",function(){
         console.log("choose mxd");
-        alert("瑪夏多能夠潛入對手的影子，模仿對手的動作和能力。在模仿的過程中會變得比本尊更強。。");
+        alert("瑪夏多能夠潛入對手的影子，模仿對手的動作和能力。在模仿的過程中會變得比本尊更強。");
         if(foxget || galaget){
             alert("屬性:格鬥,幽靈, 弱點:飛行,超能力,妖精,幽靈");
             pkmcount = pkmcount + 1;
@@ -638,28 +600,32 @@ function InitButtonEvent(){
     });
 }
 
-console.log(IsWeb3Injection);
-if (IsWeb3Injection){
-    //IsWeb3Injection == true
-    //執行合約
-    //contract.js
+InitGame();
+// console.log(IsWeb3Injection);
+// if (IsWeb3Injection){
+//     //IsWeb3Injection == true
+//     //執行合約
+//     //contract.js
     
-    var checkWeb3Injection = setInterval(function(){
-        if (window.ethereum.isConnected !== 0){ //!!!!!!!!ERROR here when metamask is not activate : Uncaught TypeError: Cannot read properties of undefined!!!!!!!!
-            console.log("connect to web3 injection");
-            Web3Injection = true;
-            // console.log("clear interval");
-            clearInterval(checkWeb3Injection);
-            InitGame();
-        }else{
-            console.log("no web3 connection");
-        }
-    }, 100);
+//     var checkWeb3Injection = setInterval(function(){
+//         if (window.ethereum.isConnected !== 0){ //!!!!!!!!ERROR here when metamask is not activate : Uncaught TypeError: Cannot read properties of undefined!!!!!!!!
+//             console.log("connect to web3 injection");
+//             Web3Injection = true;
+//             // console.log("clear interval");
+//             clearInterval(checkWeb3Injection);
+//             InitGame();
+//         }else{
+//             console.log("no web3 connection");
+//         }
+//     }, 100);
 
-}else{
-    //IsWeb3Injection == false
-}
+// }else{
+//     //IsWeb3Injection == false
+// }
 
 //--------------------------------------pixi--------------------------------------
+
+
+
 
 
