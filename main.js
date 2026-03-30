@@ -7,7 +7,13 @@
 // const provider = await detectEthereumProvider();
 
 var IsWeb3Injection = false;
-window.ethereum.enable();
+if (window.ethereum) {
+    window.ethereum.enable().catch(err => {
+        console.warn("MetaMask not available");
+    });
+} else {
+    console.warn("Install MetaMask to use Web3 features");
+}
 
 // var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 // const myWeb3 = new Web3(web3.currentProvider); //windows.web3 is deprecated, please use window.ethereum instead.
