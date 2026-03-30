@@ -20,7 +20,7 @@ Interactive portfolio featuring:
 - Pokémon-themed mini-game
 
 ## How to Deploy
-Deployed on GitHub Pages: [View Live](https://yuhsuanfang.github.io/ray0815.github.io/)
+Deployed on GitHub Pages: [View Live](https://yuhsuanfang.github.io/ray0815/)
 
 ## Setup Locally
 ```bash
